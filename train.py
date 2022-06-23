@@ -13,7 +13,7 @@ data_dir = myconfig.nifti_base
 model_dir = myconfig.model_dir
 data_in = prepare_data(data_dir, cache=True)
 
-device = torch.device("cuda:0")
+device = torch.device("cpu") # For mac with GPU
 model = UNet(
     dimensions=3,
     in_channels=1,
